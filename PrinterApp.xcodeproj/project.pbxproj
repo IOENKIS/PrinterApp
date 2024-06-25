@@ -11,6 +11,11 @@
 		18856AF72C2AB3FD00C61982 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856AF62C2AB3FD00C61982 /* ContentView.swift */; };
 		18856AF92C2AB40100C61982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18856AF82C2AB40100C61982 /* Assets.xcassets */; };
 		18856AFC2C2AB40100C61982 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18856AFB2C2AB40100C61982 /* Preview Assets.xcassets */; };
+		18856B032C2AC6A600C61982 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B022C2AC6A500C61982 /* OnboardingView.swift */; };
+		18856B072C2AC6ED00C61982 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B062C2AC6ED00C61982 /* OnboardingSlide.swift */; };
+		18856B092C2AC6F800C61982 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B082C2AC6F800C61982 /* PaywallView.swift */; };
+		18856B0B2C2AC72500C61982 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B0A2C2AC72500C61982 /* MainView.swift */; };
+		18856B102C2AC79500C61982 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B0F2C2AC79500C61982 /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		18856AF62C2AB3FD00C61982 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18856AF82C2AB40100C61982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18856AFB2C2AB40100C61982 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		18856B022C2AC6A500C61982 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		18856B062C2AC6ED00C61982 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		18856B082C2AC6F800C61982 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		18856B0A2C2AC72500C61982 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		18856B0F2C2AC79500C61982 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,8 @@
 		18856AF32C2AB3FD00C61982 /* PrinterApp */ = {
 			isa = PBXGroup;
 			children = (
+				18856B0E2C2AC76500C61982 /* MainView */,
+				18856B0D2C2AC75600C61982 /* Onboarding */,
 				18856AF42C2AB3FD00C61982 /* PrinterAppApp.swift */,
 				18856AF62C2AB3FD00C61982 /* ContentView.swift */,
 				18856AF82C2AB40100C61982 /* Assets.xcassets */,
@@ -65,6 +77,25 @@
 				18856AFB2C2AB40100C61982 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		18856B0D2C2AC75600C61982 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				18856B0F2C2AC79500C61982 /* SplashView.swift */,
+				18856B022C2AC6A500C61982 /* OnboardingView.swift */,
+				18856B082C2AC6F800C61982 /* PaywallView.swift */,
+				18856B062C2AC6ED00C61982 /* OnboardingSlide.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		18856B0E2C2AC76500C61982 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				18856B0A2C2AC72500C61982 /* MainView.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +168,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18856B072C2AC6ED00C61982 /* OnboardingSlide.swift in Sources */,
+				18856B0B2C2AC72500C61982 /* MainView.swift in Sources */,
+				18856B092C2AC6F800C61982 /* PaywallView.swift in Sources */,
+				18856B032C2AC6A600C61982 /* OnboardingView.swift in Sources */,
 				18856AF72C2AB3FD00C61982 /* ContentView.swift in Sources */,
 				18856AF52C2AB3FD00C61982 /* PrinterAppApp.swift in Sources */,
+				18856B102C2AC79500C61982 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
