@@ -16,6 +16,9 @@
 		18856B092C2AC6F800C61982 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B082C2AC6F800C61982 /* PaywallView.swift */; };
 		18856B0B2C2AC72500C61982 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B0A2C2AC72500C61982 /* MainView.swift */; };
 		18856B102C2AC79500C61982 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B0F2C2AC79500C61982 /* SplashView.swift */; };
+		18856B122C2ACB0200C61982 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B112C2ACB0200C61982 /* RoundedButton.swift */; };
+		18856B142C2ACB1300C61982 /* TrialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B132C2ACB1300C61982 /* TrialButton.swift */; };
+		18856B182C2ACB7000C61982 /* HapticTouchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B172C2ACB7000C61982 /* HapticTouchManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		18856B082C2AC6F800C61982 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		18856B0A2C2AC72500C61982 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		18856B0F2C2AC79500C61982 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		18856B112C2ACB0200C61982 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		18856B132C2ACB1300C61982 /* TrialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButton.swift; sourceTree = "<group>"; };
+		18856B172C2ACB7000C61982 /* HapticTouchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticTouchManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,8 @@
 		18856AF32C2AB3FD00C61982 /* PrinterApp */ = {
 			isa = PBXGroup;
 			children = (
+				18856B162C2ACB5C00C61982 /* Library */,
+				18856B152C2ACB2400C61982 /* UIElements */,
 				18856B0E2C2AC76500C61982 /* MainView */,
 				18856B0D2C2AC75600C61982 /* Onboarding */,
 				18856AF42C2AB3FD00C61982 /* PrinterAppApp.swift */,
@@ -96,6 +104,23 @@
 				18856B0A2C2AC72500C61982 /* MainView.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		18856B152C2ACB2400C61982 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				18856B132C2ACB1300C61982 /* TrialButton.swift */,
+				18856B112C2ACB0200C61982 /* RoundedButton.swift */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		18856B162C2ACB5C00C61982 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				18856B172C2ACB7000C61982 /* HapticTouchManager.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,8 +194,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				18856B072C2AC6ED00C61982 /* OnboardingSlide.swift in Sources */,
+				18856B142C2ACB1300C61982 /* TrialButton.swift in Sources */,
 				18856B0B2C2AC72500C61982 /* MainView.swift in Sources */,
 				18856B092C2AC6F800C61982 /* PaywallView.swift in Sources */,
+				18856B182C2ACB7000C61982 /* HapticTouchManager.swift in Sources */,
+				18856B122C2ACB0200C61982 /* RoundedButton.swift in Sources */,
 				18856B032C2AC6A600C61982 /* OnboardingView.swift in Sources */,
 				18856AF72C2AB3FD00C61982 /* ContentView.swift in Sources */,
 				18856AF52C2AB3FD00C61982 /* PrinterAppApp.swift in Sources */,

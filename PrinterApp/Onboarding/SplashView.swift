@@ -9,7 +9,25 @@ import SwiftUI
 
 struct SplashView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.white
+                .ignoresSafeArea()
+            VStack(spacing: 40){
+                Spacer()
+                Spacer()
+                Image("splashIcon")
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                Text("Printer App")
+                    .font(.system(size: 25, weight: .medium))
+                    .foregroundStyle(.black)
+                Spacer()
+                Spacer()
+                Image("loadingCircle")
+                    .resizable()
+                    .frame(width: 50, height: 50)
+            }
+        }
     }
 }
 
