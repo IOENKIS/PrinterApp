@@ -22,11 +22,7 @@ struct RoundedButton: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 40)
                     .frame(width: UIScreen.main.bounds.width - 15, height: 60)
-                    .foregroundStyle(                LinearGradient(colors: [.firstGradientButton, .secondGradientButton], startPoint: .top, endPoint: .bottom))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 40)
-                            .stroke(Color.black, lineWidth: 5)
-                    }
+                    .foregroundStyle(.blueButton)
                 Text(text)
                     .foregroundColor(.white)
                     .font(.system(size: 16, weight: .bold))

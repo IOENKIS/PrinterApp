@@ -30,7 +30,7 @@ struct TrialButton: View {
                     // Empty label closure
                 }
                 .padding(.trailing, 40)
-                .tint(Color.purple)
+                .tint(Color.green)
             }
         }
     }
