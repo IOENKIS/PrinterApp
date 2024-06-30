@@ -12,6 +12,7 @@ struct PrinterAppApp: App {
     @State private var dismissSplash = false
     @Environment(\.scenePhase) var scenePhase
     @State private var purchased: String?
+    @StateObject private var dataController = DataController()
 
     var body: some Scene {
         WindowGroup {
@@ -26,8 +27,10 @@ struct PrinterAppApp: App {
                 if dismissSplash {
                     if UserDefaults.standard.bool(forKey: "onboardingDone") == true {
                         MainView()
+                            .environment(\.managedObjectContext, dataController.container.viewContext)
                     } else {
                         OnboardingView()
+                            .environment(\.managedObjectContext, dataController.container.viewContext)
                     }
                 }
             }

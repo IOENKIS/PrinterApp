@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		18856AF52C2AB3FD00C61982 /* PrinterAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856AF42C2AB3FD00C61982 /* PrinterAppApp.swift */; };
-		18856AF72C2AB3FD00C61982 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856AF62C2AB3FD00C61982 /* ContentView.swift */; };
 		18856AF92C2AB40100C61982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18856AF82C2AB40100C61982 /* Assets.xcassets */; };
 		18856AFC2C2AB40100C61982 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18856AFB2C2AB40100C61982 /* Preview Assets.xcassets */; };
 		18856B032C2AC6A600C61982 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B022C2AC6A500C61982 /* OnboardingView.swift */; };
@@ -21,14 +20,16 @@
 		18856B182C2ACB7000C61982 /* HapticTouchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B172C2ACB7000C61982 /* HapticTouchManager.swift */; };
 		18856B1A2C2C33F000C61982 /* ScansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B192C2C33F000C61982 /* ScansView.swift */; };
 		18856B1C2C2C340800C61982 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B1B2C2C340800C61982 /* SettingsView.swift */; };
-		18856B212C2C488B00C61982 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B202C2C488A00C61982 /* Document.swift */; };
-		18856B232C2C48B600C61982 /* DocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B222C2C48B600C61982 /* DocumentViewModel.swift */; };
+		18856B292C2EDD1B00C61982 /* PrinterApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18856B272C2EDD1B00C61982 /* PrinterApp.xcdatamodeld */; };
+		18856B302C314E7900C61982 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B2F2C314E7900C61982 /* PersistenceController.swift */; };
+		18856B332C3152E700C61982 /* IRLPDFScanContent in Frameworks */ = {isa = PBXBuildFile; productRef = 18856B322C3152E700C61982 /* IRLPDFScanContent */; };
+		18856B352C3155DF00C61982 /* DocumentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B342C3155DF00C61982 /* DocumentListView.swift */; };
+		18856B372C31574F00C61982 /* DocumentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B362C31574F00C61982 /* DocumentRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18856AF12C2AB3FD00C61982 /* PrinterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrinterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18856AF42C2AB3FD00C61982 /* PrinterAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterAppApp.swift; sourceTree = "<group>"; };
-		18856AF62C2AB3FD00C61982 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18856AF82C2AB40100C61982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18856AFB2C2AB40100C61982 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18856B022C2AC6A500C61982 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -41,8 +42,10 @@
 		18856B172C2ACB7000C61982 /* HapticTouchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticTouchManager.swift; sourceTree = "<group>"; };
 		18856B192C2C33F000C61982 /* ScansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScansView.swift; sourceTree = "<group>"; };
 		18856B1B2C2C340800C61982 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		18856B202C2C488A00C61982 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
-		18856B222C2C48B600C61982 /* DocumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewModel.swift; sourceTree = "<group>"; };
+		18856B282C2EDD1B00C61982 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		18856B2F2C314E7900C61982 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		18856B342C3155DF00C61982 /* DocumentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentListView.swift; sourceTree = "<group>"; };
+		18856B362C31574F00C61982 /* DocumentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18856B332C3152E700C61982 /* IRLPDFScanContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,15 +79,16 @@
 		18856AF32C2AB3FD00C61982 /* PrinterApp */ = {
 			isa = PBXGroup;
 			children = (
-				18856B242C2C48CA00C61982 /* Document */,
+				18856B2E2C2EE08600C61982 /* Document */,
 				18856B162C2ACB5C00C61982 /* Library */,
 				18856B152C2ACB2400C61982 /* UIElements */,
 				18856B0E2C2AC76500C61982 /* MainView */,
 				18856B0D2C2AC75600C61982 /* Onboarding */,
 				18856AF42C2AB3FD00C61982 /* PrinterAppApp.swift */,
-				18856AF62C2AB3FD00C61982 /* ContentView.swift */,
 				18856AF82C2AB40100C61982 /* Assets.xcassets */,
 				18856AFA2C2AB40100C61982 /* Preview Content */,
+				18856B272C2EDD1B00C61982 /* PrinterApp.xcdatamodeld */,
+				18856B2F2C314E7900C61982 /* PersistenceController.swift */,
 			);
 			path = PrinterApp;
 			sourceTree = "<group>";
@@ -134,11 +139,11 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
-		18856B242C2C48CA00C61982 /* Document */ = {
+		18856B2E2C2EE08600C61982 /* Document */ = {
 			isa = PBXGroup;
 			children = (
-				18856B222C2C48B600C61982 /* DocumentViewModel.swift */,
-				18856B202C2C488A00C61982 /* Document.swift */,
+				18856B342C3155DF00C61982 /* DocumentListView.swift */,
+				18856B362C31574F00C61982 /* DocumentRow.swift */,
 			);
 			path = Document;
 			sourceTree = "<group>";
@@ -159,6 +164,9 @@
 			dependencies = (
 			);
 			name = PrinterApp;
+			packageProductDependencies = (
+				18856B322C3152E700C61982 /* IRLPDFScanContent */,
+			);
 			productName = PrinterApp;
 			productReference = 18856AF12C2AB3FD00C61982 /* PrinterApp.app */;
 			productType = "com.apple.product-type.application";
@@ -187,6 +195,9 @@
 				Base,
 			);
 			mainGroup = 18856AE82C2AB3FD00C61982;
+			packageReferences = (
+				18856B312C3152E700C61982 /* XCRemoteSwiftPackageReference "IRLPDFScanContent" */,
+			);
 			productRefGroup = 18856AF22C2AB3FD00C61982 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -214,19 +225,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				18856B072C2AC6ED00C61982 /* OnboardingSlide.swift in Sources */,
-				18856B232C2C48B600C61982 /* DocumentViewModel.swift in Sources */,
 				18856B142C2ACB1300C61982 /* TrialButton.swift in Sources */,
 				18856B0B2C2AC72500C61982 /* MainView.swift in Sources */,
+				18856B372C31574F00C61982 /* DocumentRow.swift in Sources */,
 				18856B092C2AC6F800C61982 /* PaywallView.swift in Sources */,
 				18856B182C2ACB7000C61982 /* HapticTouchManager.swift in Sources */,
 				18856B122C2ACB0200C61982 /* RoundedButton.swift in Sources */,
+				18856B302C314E7900C61982 /* PersistenceController.swift in Sources */,
 				18856B032C2AC6A600C61982 /* OnboardingView.swift in Sources */,
-				18856AF72C2AB3FD00C61982 /* ContentView.swift in Sources */,
 				18856AF52C2AB3FD00C61982 /* PrinterAppApp.swift in Sources */,
-				18856B212C2C488B00C61982 /* Document.swift in Sources */,
 				18856B1C2C2C340800C61982 /* SettingsView.swift in Sources */,
+				18856B292C2EDD1B00C61982 /* PrinterApp.xcdatamodeld in Sources */,
 				18856B1A2C2C33F000C61982 /* ScansView.swift in Sources */,
 				18856B102C2AC79500C61982 /* SplashView.swift in Sources */,
+				18856B352C3155DF00C61982 /* DocumentListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +444,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18856B312C3152E700C61982 /* XCRemoteSwiftPackageReference "IRLPDFScanContent" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/charlymr/IRLPDFScanContent.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18856B322C3152E700C61982 /* IRLPDFScanContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18856B312C3152E700C61982 /* XCRemoteSwiftPackageReference "IRLPDFScanContent" */;
+			productName = IRLPDFScanContent;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		18856B272C2EDD1B00C61982 /* PrinterApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18856B282C2EDD1B00C61982 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 18856B282C2EDD1B00C61982 /* DataModel.xcdatamodel */;
+			path = PrinterApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 18856AE92C2AB3FD00C61982 /* Project object */;
 }

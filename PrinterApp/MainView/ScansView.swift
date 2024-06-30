@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct ScansView: View {
+    @FetchRequest(sortDescriptors: []) var docs: FetchedResults<Document>
     var body: some View {
         NavigationStack {
             ZStack{
-                Image("emptyImage")
-                    .padding(.bottom, 50)
+                if docs.isEmpty {
+                    Image("emptyImage")
+                        .padding(.bottom, 50)
+                } else {
+                    DocumentListView(documents: docs)
+                }
                 VStack {
                     Spacer()
                     
@@ -38,7 +43,7 @@ struct ScansView: View {
                         Image("addIcon")
                             .resizable()
                             .frame(width: 50, height: 50)
-                            .padding(.leading, 250)
+                            .padding(.leading, 200)
                             .padding(.bottom, 20)
                     }
                 }

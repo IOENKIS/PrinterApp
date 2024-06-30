@@ -1,0 +1,15 @@
+{
+  "originHash" : "8d6d39797d7343332083b9c1fabd377fa182f0a535833c061a7ac174c3cfb7cb",
+  "pins" : [
+    {
+      "identity" : "irlpdfscancontent",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/charlymr/IRLPDFScanContent.git",
+      "state" : {
+        "revision" : "86780accd60ac458ead0f5902ac375f5bdfe4069",
+        "version" : "1.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}

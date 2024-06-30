@@ -13,6 +13,7 @@ enum Tab {
 
 struct MainView: View {
     @State private var selector: Bool = true
+    @Environment(\.managedObjectContext) private var viewContext
     var body: some View {
         TabView{
             ScansView()
@@ -32,6 +33,7 @@ struct MainView: View {
                     selector = true
                 }
         }
+        .environment(\.managedObjectContext, viewContext)
     }
 }
 
