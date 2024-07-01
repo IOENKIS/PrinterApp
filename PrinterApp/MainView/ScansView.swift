@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import PDFKit
 
 struct ScansView: View {
+    @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) var docs: FetchedResults<Document>
+    @State private var showDocumentPicker = false
     var body: some View {
         NavigationStack {
             ZStack{
@@ -23,7 +26,7 @@ struct ScansView: View {
                     
                     Menu {
                         Button(action: {
-                            // Дія для "Import Files"
+                            showDocumentPicker = true
                         }) {
                             Label("Import Files", systemImage: "square.and.arrow.down")
                         }
@@ -51,9 +54,53 @@ struct ScansView: View {
             }
             .navigationTitle("My Documents")
         }
+        .sheet(isPresented: $showDocumentPicker) {
+            DocumentPickerView { url in
+                importDocument(from: url)
+            }
+        }
+    }
+    private func importDocument(from url: URL) {
+        let newDocument = Document(context: viewContext)
+        newDocument.name = url.lastPathComponent
+        newDocument.date = Date()
+        
+        if let data = try? Data(contentsOf: url) {
+            newDocument.imageData = data
+            
+            if url.pathExtension.lowercased() == "pdf" {
+                if let pdfDocument = PDFDocument(data: data) {
+                    newDocument.pageCount = Int16(pdfDocument.pageCount)
+                }
+            } else {
+                newDocument.pageCount = 1
+            }
+        }
+        
+        do {
+            try viewContext.save()
+        } catch {
+            print("Failed to save document: \(error)")
+        }
+    }
+    
+    private func importImage(image: UIImage) {
+        let newDocument = Document(context: viewContext)
+        newDocument.name = "Imported Photo"
+        newDocument.date = Date()
+        newDocument.imageData = image.jpegData(compressionQuality: 1.0)
+        newDocument.pageCount = 1
+        
+        do {
+            try viewContext.save()
+        } catch {
+            print("Failed to save document: \(error)")
+        }
     }
 }
 
 #Preview {
     ScansView()
 }
+
+

@@ -12,7 +12,7 @@ struct PrinterAppApp: App {
     @State private var dismissSplash = false
     @Environment(\.scenePhase) var scenePhase
     @State private var purchased: String?
-    @StateObject private var dataController = DataController()
+    @StateObject private var dataController = PersistenceController()
 
     var body: some Scene {
         WindowGroup {

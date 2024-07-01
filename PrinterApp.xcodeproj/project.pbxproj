@@ -25,6 +25,7 @@
 		18856B332C3152E700C61982 /* IRLPDFScanContent in Frameworks */ = {isa = PBXBuildFile; productRef = 18856B322C3152E700C61982 /* IRLPDFScanContent */; };
 		18856B352C3155DF00C61982 /* DocumentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B342C3155DF00C61982 /* DocumentListView.swift */; };
 		18856B372C31574F00C61982 /* DocumentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B362C31574F00C61982 /* DocumentRow.swift */; };
+		18856B392C31594500C61982 /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B382C31594400C61982 /* DocumentPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		18856B2F2C314E7900C61982 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		18856B342C3155DF00C61982 /* DocumentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentListView.swift; sourceTree = "<group>"; };
 		18856B362C31574F00C61982 /* DocumentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentRow.swift; sourceTree = "<group>"; };
+		18856B382C31594400C61982 /* DocumentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			children = (
 				18856B342C3155DF00C61982 /* DocumentListView.swift */,
 				18856B362C31574F00C61982 /* DocumentRow.swift */,
+				18856B382C31594400C61982 /* DocumentPickerView.swift */,
 			);
 			path = Document;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				18856B032C2AC6A600C61982 /* OnboardingView.swift in Sources */,
 				18856AF52C2AB3FD00C61982 /* PrinterAppApp.swift in Sources */,
 				18856B1C2C2C340800C61982 /* SettingsView.swift in Sources */,
+				18856B392C31594500C61982 /* DocumentPickerView.swift in Sources */,
 				18856B292C2EDD1B00C61982 /* PrinterApp.xcdatamodeld in Sources */,
 				18856B1A2C2C33F000C61982 /* ScansView.swift in Sources */,
 				18856B102C2AC79500C61982 /* SplashView.swift in Sources */,
