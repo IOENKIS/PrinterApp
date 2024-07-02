@@ -9,6 +9,11 @@ import SwiftUI
 import CoreData
 import PDFKit
 
+enum ItemsType: String {
+    case jpg = "jpg"
+    case pdf = "pdf"
+}
+
 struct DetailView: View {
     @ObservedObject var document: Document
     var onShare: () -> Void
@@ -150,6 +155,45 @@ struct DetailView: View {
         formatter.dateStyle = .medium
         return formatter.string(from: date)
     }
+    
+    private func printDocument() {
+            guard let imageData = document.imageData else {
+                print("No document data available.")
+                return
+            }
+
+            var data: [Data] = [imageData]
+            var fileType: ItemsType = .jpg
+
+            if document.pageCount > 1 {
+                fileType = .pdf
+            }
+
+            printFile(data: data, fileType: fileType)
+        }
+
+        private func printFile(data: [Data], fileType: ItemsType) {
+            guard UIPrintInteractionController.isPrintingAvailable else {
+                print("Printing is not available.")
+                return
+            }
+            
+            let printController = UIPrintInteractionController.shared
+            let printInfo = UIPrintInfo(dictionary: nil)
+            printInfo.outputType = .general
+            printInfo.jobName = "Print Job"
+            printController.printInfo = printInfo
+            printController.showsNumberOfCopies = true
+            
+            switch fileType {
+            case .pdf:
+                printController.printingItem = data.first
+            case .jpg:
+                printController.printingItems = data
+            }
+            
+            printController.present(animated: true, completionHandler: nil)
+        }
 }
 
 struct PDFKitView: UIViewRepresentable {

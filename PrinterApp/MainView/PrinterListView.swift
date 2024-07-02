@@ -14,39 +14,42 @@ struct Printer: Identifiable {
 }
 
 struct PrinterListView: View {
-    @State private var printers: [Printer] = [
-        Printer(name: "HP LaserJet P1102w", ipAddress: "192.168.2.56"),
-        Printer(name: "HP LaserJet P1102w", ipAddress: "192.168.2.57"),
-        Printer(name: "HP LaserJet P1102w", ipAddress: "192.168.2.58"),
-        Printer(name: "HP LaserJet P1102w", ipAddress: "192.168.2.59")
-    ]
+    @StateObject private var browser = BonjourPrinterBrowser()
     @State private var selectedPrinterID: UUID?
 
     var body: some View {
-        List(printers) { printer in
-            HStack {
-                Image(systemName: "printer.fill")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                VStack(alignment: .leading) {
-                    Text(printer.name)
-                        .font(.headline)
-                    Text(printer.ipAddress)
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
+        NavigationView {
+            List(browser.printers) { printer in
+                HStack {
+                    Image(systemName: "printer.fill")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                    VStack(alignment: .leading) {
+                        Text(printer.name)
+                            .font(.headline)
+                        Text(printer.ipAddress)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                    Spacer()
+                    if selectedPrinterID == printer.id {
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundColor(.blue)
+                    }
                 }
-                Spacer()
-                if selectedPrinterID == printer.id {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(.blue)
+                .padding(.vertical, 8)
+                .onTapGesture {
+                    selectedPrinterID = printer.id
                 }
             }
-            .padding(.vertical, 8)
-            .onTapGesture {
-                selectedPrinterID = printer.id
+            .navigationTitle("Wi-Fi Printers")
+            .onAppear {
+                browser.startBrowsing()
+            }
+            .onDisappear {
+                browser.stopBrowsing()
             }
         }
-        .navigationTitle("Wi-Fi Printers")
     }
 }
 

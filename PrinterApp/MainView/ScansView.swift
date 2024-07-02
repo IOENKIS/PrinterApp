@@ -21,7 +21,7 @@ struct ScansView: View {
     @State private var selectedDocument: Document?
     @State private var showDetailView = false
     @State private var refreshID = UUID()
-
+    
     var body: some View {
         ZStack {
             NavigationView {
@@ -36,23 +36,23 @@ struct ScansView: View {
                         }
                         .id(refreshID)
                     }
-
+                    
                     VStack {
                         Spacer()
-
+                        
                         Menu {
                             Button(action: {
                                 showDocumentPicker = true
                             }) {
                                 Label("Import Files", systemImage: "square.and.arrow.down")
                             }
-
+                            
                             Button(action: {
                                 showDocumentCamera = true
                             }) {
                                 Label("Scan Documents", systemImage: "doc.text.viewfinder")
                             }
-
+                            
                             Button(action: {
                                 showImagePicker = true
                             }) {
@@ -75,7 +75,7 @@ struct ScansView: View {
                 })
             }
             .zIndex(0)
-
+            
             if showDetailView, let document = selectedDocument {
                 DetailView(
                     document: document,
@@ -130,15 +130,15 @@ struct ScansView: View {
             }
         }
     }
-
+    
     private func importDocument(from url: URL) {
         let newDocument = Document(context: viewContext)
         newDocument.name = url.lastPathComponent
         newDocument.date = Date()
-
+        
         if let data = try? Data(contentsOf: url) {
             newDocument.imageData = data
-
+            
             if url.pathExtension.lowercased() == "pdf" {
                 if let pdfDocument = PDFDocument(data: data) {
                     newDocument.pageCount = Int16(pdfDocument.pageCount)
@@ -147,28 +147,28 @@ struct ScansView: View {
                 newDocument.pageCount = 1
             }
         }
-
+        
         do {
             try viewContext.save()
         } catch {
             print("Failed to save document: \(error)")
         }
     }
-
+    
     private func importImage(image: UIImage) {
         let newDocument = Document(context: viewContext)
         newDocument.name = "Scanned Document"
         newDocument.date = Date()
         newDocument.imageData = image.jpegData(compressionQuality: 1.0)
         newDocument.pageCount = 1
-
+        
         do {
             try viewContext.save()
         } catch {
             print("Failed to save document: \(error)")
         }
     }
-
+    
     private func deleteDocument(_ document: Document) {
         viewContext.delete(document)
         do {
