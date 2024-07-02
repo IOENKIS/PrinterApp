@@ -17,13 +17,15 @@ struct DocumentRow: View {
             if let imageData = document.imageData, let image = getImage(from: imageData, name: document.name) {
                 Image(uiImage: image)
                     .resizable()
-                    .frame(maxWidth: 130, maxHeight: 80)
+                    .scaledToFill()
+                    .frame(width: 85, height: 110)
                     .cornerRadius(8)
                     .padding(.trailing, 15)
             } else {
                 Image(systemName: "doc")
                     .resizable()
-                    .frame(maxWidth: 130, maxHeight: 80)
+                    .scaledToFill()
+                    .frame(width: 85, height: 110)
                     .cornerRadius(8)
                     .padding(.trailing, 15)
             }
@@ -31,14 +33,16 @@ struct DocumentRow: View {
             VStack(alignment: .leading) {
                 Text(document.name ?? "Unknown Document")
                     .font(.headline)
-                Text("\(formattedDate(document.date))")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                if document.pageCount > 1 {
-                     Text("\(document.pageCount) pages")
-                         .font(.subheadline)
-                         .foregroundColor(.gray)
-                 }
+                HStack(spacing: 3){
+                    if document.pageCount > 1 {
+                        Text("\(document.pageCount) pages •")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                    Text("\(formattedDate(document.date))")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                }
             }
             Spacer()
             
@@ -58,7 +62,7 @@ struct DocumentRow: View {
         return formatter.string(from: date)
     }
     
-    private func pdfThumbnail(data: Data) -> UIImage? {
+    func pdfThumbnail(data: Data) -> UIImage? {
         guard let document = PDFDocument(data: data), let page = document.page(at: 0) else {
             return nil
         }
@@ -74,7 +78,7 @@ struct DocumentRow: View {
         }
     }
     
-    private func getImage(from data: Data, name: String?) -> UIImage? {
+    func getImage(from data: Data, name: String?) -> UIImage? {
         if let name = name, name.lowercased().hasSuffix(".pdf") {
             return pdfThumbnail(data: data)
         } else {

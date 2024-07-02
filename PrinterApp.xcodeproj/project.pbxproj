@@ -10,6 +10,8 @@
 		187853092C32BB1E00C279BB /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187853082C32BB1E00C279BB /* ImagePickerView.swift */; };
 		1878530C2C32BC5B00C279BB /* DocumentCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1878530B2C32BC5B00C279BB /* DocumentCameraView.swift */; };
 		1878530E2C32BD3000C279BB /* CropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1878530D2C32BD3000C279BB /* CropView.swift */; };
+		187853122C33E14200C279BB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187853112C33E14200C279BB /* DetailView.swift */; };
+		187853142C3402BC00C279BB /* PrinterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187853132C3402BC00C279BB /* PrinterListView.swift */; };
 		18856AF52C2AB3FD00C61982 /* PrinterAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856AF42C2AB3FD00C61982 /* PrinterAppApp.swift */; };
 		18856AF92C2AB40100C61982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18856AF82C2AB40100C61982 /* Assets.xcassets */; };
 		18856AFC2C2AB40100C61982 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18856AFB2C2AB40100C61982 /* Preview Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		187853082C32BB1E00C279BB /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		1878530B2C32BC5B00C279BB /* DocumentCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCameraView.swift; sourceTree = "<group>"; };
 		1878530D2C32BD3000C279BB /* CropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropView.swift; sourceTree = "<group>"; };
+		187853112C33E14200C279BB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		187853132C3402BC00C279BB /* PrinterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterListView.swift; sourceTree = "<group>"; };
 		18856AF12C2AB3FD00C61982 /* PrinterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrinterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18856AF42C2AB3FD00C61982 /* PrinterAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterAppApp.swift; sourceTree = "<group>"; };
 		18856AF82C2AB40100C61982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				18856B0A2C2AC72500C61982 /* MainView.swift */,
 				18856B192C2C33F000C61982 /* ScansView.swift */,
 				18856B1B2C2C340800C61982 /* SettingsView.swift */,
+				187853112C33E14200C279BB /* DetailView.swift */,
+				187853132C3402BC00C279BB /* PrinterListView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 				1878530C2C32BC5B00C279BB /* DocumentCameraView.swift in Sources */,
 				18856B072C2AC6ED00C61982 /* OnboardingSlide.swift in Sources */,
 				18856B142C2ACB1300C61982 /* TrialButton.swift in Sources */,
+				187853142C3402BC00C279BB /* PrinterListView.swift in Sources */,
 				18856B0B2C2AC72500C61982 /* MainView.swift in Sources */,
 				18856B372C31574F00C61982 /* DocumentRow.swift in Sources */,
 				1878530E2C32BD3000C279BB /* CropView.swift in Sources */,
@@ -253,6 +260,7 @@
 				18856B032C2AC6A600C61982 /* OnboardingView.swift in Sources */,
 				18856AF52C2AB3FD00C61982 /* PrinterAppApp.swift in Sources */,
 				18856B1C2C2C340800C61982 /* SettingsView.swift in Sources */,
+				187853122C33E14200C279BB /* DetailView.swift in Sources */,
 				18856B392C31594500C61982 /* DocumentPickerView.swift in Sources */,
 				18856B292C2EDD1B00C61982 /* PrinterApp.xcdatamodeld in Sources */,
 				18856B1A2C2C33F000C61982 /* ScansView.swift in Sources */,

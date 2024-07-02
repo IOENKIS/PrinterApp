@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-enum Tab {
-    case scan, settings
-}
-
 struct MainView: View {
     @State private var selector: Bool = true
     @Environment(\.managedObjectContext) private var viewContext
@@ -20,7 +16,6 @@ struct MainView: View {
                 .tabItem {
                     selector ? Image("tabScanIcon") : Image("selectedTabScanIcon")
                 }
-                .tag(Tab.scan)
                 .onAppear {
                     selector = false
                 }
@@ -28,7 +23,6 @@ struct MainView: View {
                 .tabItem {
                     !selector ? Image("tabSettingsIcon") : Image("selectedTabSettingsIcon")
                 }
-                .tag(Tab.scan)
                 .onAppear {
                     selector = true
                 }
