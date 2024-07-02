@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		187853092C32BB1E00C279BB /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187853082C32BB1E00C279BB /* ImagePickerView.swift */; };
+		1878530C2C32BC5B00C279BB /* DocumentCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1878530B2C32BC5B00C279BB /* DocumentCameraView.swift */; };
+		1878530E2C32BD3000C279BB /* CropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1878530D2C32BD3000C279BB /* CropView.swift */; };
 		18856AF52C2AB3FD00C61982 /* PrinterAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856AF42C2AB3FD00C61982 /* PrinterAppApp.swift */; };
 		18856AF92C2AB40100C61982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18856AF82C2AB40100C61982 /* Assets.xcassets */; };
 		18856AFC2C2AB40100C61982 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18856AFB2C2AB40100C61982 /* Preview Assets.xcassets */; };
@@ -22,13 +25,15 @@
 		18856B1C2C2C340800C61982 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B1B2C2C340800C61982 /* SettingsView.swift */; };
 		18856B292C2EDD1B00C61982 /* PrinterApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18856B272C2EDD1B00C61982 /* PrinterApp.xcdatamodeld */; };
 		18856B302C314E7900C61982 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B2F2C314E7900C61982 /* PersistenceController.swift */; };
-		18856B332C3152E700C61982 /* IRLPDFScanContent in Frameworks */ = {isa = PBXBuildFile; productRef = 18856B322C3152E700C61982 /* IRLPDFScanContent */; };
 		18856B352C3155DF00C61982 /* DocumentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B342C3155DF00C61982 /* DocumentListView.swift */; };
 		18856B372C31574F00C61982 /* DocumentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B362C31574F00C61982 /* DocumentRow.swift */; };
 		18856B392C31594500C61982 /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18856B382C31594400C61982 /* DocumentPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		187853082C32BB1E00C279BB /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		1878530B2C32BC5B00C279BB /* DocumentCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCameraView.swift; sourceTree = "<group>"; };
+		1878530D2C32BD3000C279BB /* CropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropView.swift; sourceTree = "<group>"; };
 		18856AF12C2AB3FD00C61982 /* PrinterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrinterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18856AF42C2AB3FD00C61982 /* PrinterAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterAppApp.swift; sourceTree = "<group>"; };
 		18856AF82C2AB40100C61982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,13 +60,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18856B332C3152E700C61982 /* IRLPDFScanContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1878530A2C32BC3900C279BB /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				18856B382C31594400C61982 /* DocumentPickerView.swift */,
+				187853082C32BB1E00C279BB /* ImagePickerView.swift */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
 		18856AE82C2AB3FD00C61982 = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +159,9 @@
 			children = (
 				18856B342C3155DF00C61982 /* DocumentListView.swift */,
 				18856B362C31574F00C61982 /* DocumentRow.swift */,
-				18856B382C31594400C61982 /* DocumentPickerView.swift */,
+				1878530B2C32BC5B00C279BB /* DocumentCameraView.swift */,
+				1878530A2C32BC3900C279BB /* Pickers */,
+				1878530D2C32BD3000C279BB /* CropView.swift */,
 			);
 			path = Document;
 			sourceTree = "<group>";
@@ -168,7 +183,6 @@
 			);
 			name = PrinterApp;
 			packageProductDependencies = (
-				18856B322C3152E700C61982 /* IRLPDFScanContent */,
 			);
 			productName = PrinterApp;
 			productReference = 18856AF12C2AB3FD00C61982 /* PrinterApp.app */;
@@ -199,7 +213,6 @@
 			);
 			mainGroup = 18856AE82C2AB3FD00C61982;
 			packageReferences = (
-				18856B312C3152E700C61982 /* XCRemoteSwiftPackageReference "IRLPDFScanContent" */,
 			);
 			productRefGroup = 18856AF22C2AB3FD00C61982 /* Products */;
 			projectDirPath = "";
@@ -227,10 +240,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1878530C2C32BC5B00C279BB /* DocumentCameraView.swift in Sources */,
 				18856B072C2AC6ED00C61982 /* OnboardingSlide.swift in Sources */,
 				18856B142C2ACB1300C61982 /* TrialButton.swift in Sources */,
 				18856B0B2C2AC72500C61982 /* MainView.swift in Sources */,
 				18856B372C31574F00C61982 /* DocumentRow.swift in Sources */,
+				1878530E2C32BD3000C279BB /* CropView.swift in Sources */,
 				18856B092C2AC6F800C61982 /* PaywallView.swift in Sources */,
 				18856B182C2ACB7000C61982 /* HapticTouchManager.swift in Sources */,
 				18856B122C2ACB0200C61982 /* RoundedButton.swift in Sources */,
@@ -243,6 +258,7 @@
 				18856B1A2C2C33F000C61982 /* ScansView.swift in Sources */,
 				18856B102C2AC79500C61982 /* SplashView.swift in Sources */,
 				18856B352C3155DF00C61982 /* DocumentListView.swift in Sources */,
+				187853092C32BB1E00C279BB /* ImagePickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +317,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -358,7 +375,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -379,11 +397,14 @@
 				DEVELOPMENT_TEAM = XDGNVQNR94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,11 +429,14 @@
 				DEVELOPMENT_TEAM = XDGNVQNR94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,25 +472,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		18856B312C3152E700C61982 /* XCRemoteSwiftPackageReference "IRLPDFScanContent" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/charlymr/IRLPDFScanContent.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		18856B322C3152E700C61982 /* IRLPDFScanContent */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 18856B312C3152E700C61982 /* XCRemoteSwiftPackageReference "IRLPDFScanContent" */;
-			productName = IRLPDFScanContent;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		18856B272C2EDD1B00C61982 /* PrinterApp.xcdatamodeld */ = {

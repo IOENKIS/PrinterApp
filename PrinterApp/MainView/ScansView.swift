@@ -12,8 +12,13 @@ struct ScansView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) var docs: FetchedResults<Document>
     @State private var showDocumentPicker = false
+    @State private var showImagePicker = false
+    @State private var showDocumentCamera = false
+    @State private var showCropView = false
+    @State private var scannedImage: UIImage?
+    
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ZStack{
                 if docs.isEmpty {
                     Image("emptyImage")
@@ -32,13 +37,13 @@ struct ScansView: View {
                         }
                         
                         Button(action: {
-                            // Дія для "Scan Documents"
+                            showDocumentCamera = true
                         }) {
                             Label("Scan Documents", systemImage: "doc.text.viewfinder")
                         }
                         
                         Button(action: {
-                            // Дія для "Choose Photos"
+                            showImagePicker = true
                         }) {
                             Label("Choose Photos", systemImage: "photo")
                         }
@@ -46,7 +51,7 @@ struct ScansView: View {
                         Image("addIcon")
                             .resizable()
                             .frame(width: 50, height: 50)
-                            .padding(.leading, 200)
+                            .padding(.leading, 250)
                             .padding(.bottom, 20)
                     }
                 }
@@ -57,6 +62,26 @@ struct ScansView: View {
         .sheet(isPresented: $showDocumentPicker) {
             DocumentPickerView { url in
                 importDocument(from: url)
+            }
+        }
+        .sheet(isPresented: $showImagePicker) {
+            ImagePickerView { image in
+                importImage(image: image)
+            }
+        }
+        .sheet(isPresented: $showDocumentCamera) {
+            DocumentCameraView { image in
+                importImage(image: image)
+            }
+        }
+        .sheet(isPresented: $showCropView) {
+            if let image = scannedImage {
+                CropView(image: image) { croppedImage in
+                    importImage(image: croppedImage)
+                } onRetake: {
+                    showCropView = false
+                    showDocumentCamera = true
+                }
             }
         }
     }
